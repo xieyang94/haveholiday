@@ -63,7 +63,7 @@ public class ForgetPassword_Activity extends BaseActivity<ForgetPassword_View, F
         switch (v.getId()){
             case R.id.forget_bt_getcode:
 
-//                String str=String.valueOf((int)(1+Math.random()*(999999-100001+1)));
+//              String str=String.valueOf((int)(1+Math.random()*(999999-100001+1)));
                 Random random = new Random();
                 String str="";
                 for(int i=0;i<6;i++){
