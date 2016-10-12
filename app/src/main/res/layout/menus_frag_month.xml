@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp" >
+
+        <LinearLayout
+            android:id="@+id/imgs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.example.xieyang.viewpager.MyPagerGalleryView
+                android:id="@+id/gallerview"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true" >
+
+            <!-- 上面控件要显示的txtview -->
+
+            <TextView
+                android:id="@+id/adgallerytxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginLeft="20dip"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                />
+            <!-- 圆点容器 -->
+
+            <LinearLayout
+                android:id="@+id/ovalLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="10dip"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/white00"
+                android:gravity="center"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TableRow
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/month_January"
+                android:layout_width="0dip"
+                android:layout_height="90dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="一月"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="90dip"
+                android:background="@color/light_grey2" />
+
+            <TextView
+                android:id="@+id/month_February"
+                android:layout_width="0dip"
+                android:layout_height="90dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="二月"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="90dip"
+                android:background="@color/light_grey2" />
+
+            <TextView
+                android:id="@+id/month_March"
+                android:layout_width="0dip"
+                android:layout_height="90dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="三月"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_grey2" />
+
+        <TableRow
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/month_April"
+                android:layout_width="0dip"
+                android:layout_height="90dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="四月"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="90dip"
+                android:background="@color/light_grey2" />
+
+            <TextView
+                android:id="@+id/month_May"
+                android:layout_width="0dip"
+                android:layout_height="90dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="五月"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="90dip"
+                android:background="@color/light_grey2" />
+
+            <TextView
+                android:id="@+id/month_June"
+                android:layout_width="0dip"
+                android:layout_height="90dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="六月"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_grey2" />
+
+        <TableRow
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/month_July"
+                android:layout_width="0dip"
+                android:layout_height="90dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="七月"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="90dip"
+                android:background="@color/light_grey2" />
+
+            <TextView
+                android:id="@+id/month_August"
+                android:layout_width="0dip"
+                android:layout_height="90dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="八月"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="90dip"
+                android:background="@color/light_grey2" />
+
+            <TextView
+                android:id="@+id/month_September"
+                android:layout_width="0dip"
+                android:layout_height="90dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="九月"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_grey2" />
+
+        <TableRow
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/month_October"
+                android:layout_width="0dip"
+                android:layout_height="90dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="十月"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="90dip"
+                android:background="@color/light_grey2" />
+
+            <TextView
+                android:id="@+id/month_November"
+                android:layout_width="0dip"
+                android:layout_height="90dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="十一月"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="90dip"
+                android:background="@color/light_grey2" />
+
+            <TextView
+                android:id="@+id/month_December"
+                android:layout_width="0dip"
+                android:layout_height="90dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="十二月"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_grey2" />
+    </TableLayout>
+
+</LinearLayout>

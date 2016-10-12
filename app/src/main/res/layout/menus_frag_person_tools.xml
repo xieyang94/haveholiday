@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@color/light_grey2"
+        android:padding="5dip"
+        android:text="应用"
+        android:textSize="16sp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow android:background="@color/white" >
+
+            <LinearLayout
+                android:id="@+id/time_of_other_layout"
+                android:layout_width="0dip"
+                android:layout_height="110dip"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dip"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="32dip"
+                        android:layout_height="32dip"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="25dip"
+                        android:background="@drawable/time_of_other"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dip"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="55dip"
+                        android:layout_marginTop="5dip"
+                        android:gravity="center_horizontal"
+                        android:padding="5dip"
+                        android:text="时间间隔"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="110dip"
+                android:background="@color/light_grey2" />
+
+            <LinearLayout
+                android:id="@+id/time_tuisuan_layout"
+                android:layout_width="0dip"
+                android:layout_height="110dip"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dip"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="32dip"
+                        android:layout_height="32dip"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="25dip"
+                        android:background="@drawable/time_tuisuan"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dip"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="55dip"
+                        android:layout_marginTop="5dip"
+                        android:gravity="center_horizontal"
+                        android:padding="5dip"
+                        android:text="时间推算"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="110dip"
+                android:background="@color/light_grey2" />
+
+            <LinearLayout
+                android:id="@+id/tool_of_other_festival"
+                android:layout_width="0dip"
+                android:layout_height="110dip"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dip"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="25dip"
+                        android:background="@drawable/time_of_otherfestival" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dip"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="55dip"
+                        android:layout_marginTop="5dip"
+                        android:gravity="center_horizontal"
+                        android:padding="5dip"
+                        android:text="其他节日"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_grey2" />
+
+        <TableRow android:background="@color/white" >
+
+            <LinearLayout
+                android:id="@+id/time_of_constellation_layout"
+                android:layout_width="0dip"
+                android:layout_height="110dip"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dip"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="32dip"
+                        android:layout_height="32dip"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="25dip"
+                        android:background="@drawable/time_of_constellation"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dip"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="55dip"
+                        android:layout_marginTop="5dip"
+                        android:gravity="center_horizontal"
+                        android:padding="5dip"
+                        android:text="星座运势"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="110dip"
+                android:background="@color/light_grey2" />
+
+            <LinearLayout
+                android:id="@+id/time_of_birthday_layout"
+                android:layout_width="0dip"
+                android:layout_height="110dip"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dip"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="32dip"
+                        android:layout_height="32dip"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="25dip"
+                        android:background="@drawable/time_of_birthday"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dip"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="55dip"
+                        android:layout_marginTop="5dip"
+                        android:gravity="center_horizontal"
+                        android:padding="5dip"
+                        android:text="生日本"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="110dip"
+                android:background="@color/light_grey2" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="110dip"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text=""
+                android:textSize="16sp" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_grey2" />
+    </TableLayout>
+</LinearLayout>

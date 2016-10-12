@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="9" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="10dip" >
+
+                    <ImageView
+                        android:id="@+id/reply_headpicture"
+                        android:layout_width="60dip"
+                        android:layout_height="60dip"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/reply_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dip"
+                        android:text="姓名"
+                        android:textSize="16dip" />
+
+                    <TextView
+                        android:id="@+id/reply_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dip"
+                        android:text="内容"
+                        android:textSize="16dip" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dip" >
+
+                        <TextView
+                            android:id="@+id/reply_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="时间"
+                            android:textSize="16dip" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/reply_floor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="几楼"
+                            android:textSize="16dip" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dip"
+                android:background="@color/deep_grey" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

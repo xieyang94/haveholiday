@@ -1,0 +1,80 @@
+package com.example.xieyang.presenter;
+
+import com.example.xieyang.Config;
+import com.example.xieyang.entity.User;
+import com.example.xieyang.net.NetWork;
+import com.example.xieyang.respmodule.RespData;
+import com.example.xieyang.view.Login_View;
+import com.hannesdorfmann.mosby.mvp.MvpBasePresenter;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import rx.Observer;
+import rx.Subscription;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
+
+/**
+ * Created by Administrator on 2016/7/23.
+ */
+public class Login_Presenter extends MvpBasePresenter<Login_View>{
+    protected Subscription subscription;
+    private  int code ;
+    private User fromServer;
+    private Map<String, String> body = new HashMap<>();
+    private String reStr;
+
+    private Observer<RespData> login= new Observer<RespData>() {
+        @Override
+        public void onNext(RespData respData) {
+            code = respData.code;
+            fromServer = respData.data;
+            Config.USERGET = respData.data;
+            System.out.println(code+"----------------------------------code'"+Config.USERGET.getToken());
+        }
+        @Override
+        public void onCompleted() {
+            switch (code){
+                case 200:
+                    getView().cplLogin(code, fromServer);
+                    getView().successLogin();
+                    getView().hideLoading();
+                    break;
+                case 404:
+                    getView().fLogin();
+                    getView().hideLoading();
+                    System.out.println("222222222222222222222222222222222    404");
+                    break;
+            }
+
+        }
+        @Override
+        public void onError(Throwable e) {
+            getView().hideLoading();
+            getView().failedLink();
+
+            System.out.println("222222222222222222222222222222222    直接失败"+"code"+code);
+            System.out.println(e.toString() + "服务器请求失败或者服务器异常!!!--------Login_Presenter");
+        }
+    };
+
+
+    public void login(String id,String pwd) {
+        unsubscribe(subscription);
+        body.clear();
+        body.put("user.userEmail", id);
+        body.put("user.userPassword", pwd);
+        subscription = NetWork.getUserService().userLogin(body).subscribeOn(Schedulers.io()).
+                observeOn(AndroidSchedulers.mainThread()).subscribe(login);
+
+    }
+
+    protected void unsubscribe(Subscription subscription) {
+        if (subscription != null && !subscription.isUnsubscribed()) {
+            subscription.unsubscribe();
+        }
+    }
+
+
+}

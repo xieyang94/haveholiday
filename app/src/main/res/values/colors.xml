@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--顶部栏的颜色-->
+    <color name="Indigo_colorPrimaryDark">#09B2E7</color>
+    <!--标题栏Toolbar的颜色-->
+    <color name="Indigo_colorPrimary">#09B2F7</color>
+    <color name="Indigo_nav_color">#4675FF</color>
+
+
+    <!--自己定义的颜色-->
+    <!--白色-->
+    <color name="white">#ffffff</color>
+    <color name="white00">#00FFFFFF</color>
+    <color name="white32">#32FFFFFF</color>
+    <!---透明-->
+    <color name="transparent">#00000000</color>
+    <color name="transparent99">#99000000</color>
+    <color name="transparent32">#32000000</color>
+    <color name="transparent50">#50000000</color>
+    <!--黑色-->
+    <color name="black">#000000</color>
+    <color name="black1">#404848</color>
+    <!--浅灰色-->
+    <color name="light_grey">#CCCCCC</color>
+    <color name="light_grey1">#F8F8F8</color>
+    <color name="light_grey2">#f0f0f0</color>
+    <color name="light_grey3">#E6E6EC</color>
+    <color name="light_grey4">#F9F9FB</color>
+    <color name="light_grey5">#DDDDDD</color>
+    <color name="light_grey6">#c0c0c0</color>
+    <color name="light_grey7">#CDCDCD</color>
+    <color name="light_grey8">#a9a9a9</color>
+    <!--深灰色-->
+    <color name="deep_grey">#888888</color>
+    <!--蓝色-->
+    <color name="blue">#0000ff</color>
+    <color name="blue1">#049AF9</color>
+    <color name="blue2">#1398D9</color>
+    <color name="blue3">#00A3E8</color>
+    <color name="blue4">#09B2F7</color>
+
+    <!--黄色-->
+    <color name="yellow">#fff000</color>
+    <!--红色-->
+    <color name="red">#ff403c</color>
+    <color name="red1">#ff0000</color>
+    <!--标题颜色-->
+    <color name="title">#09B2F7</color>
+    <!--褐色-->
+    <color name="brown">#494925</color>
+
+
+
+
+    <color name="alpha_white">#49ffffff</color>
+
+
+    <color name="gray">#666666</color>
+    <color name="geek_green">#35b558</color>
+
+    <color name="primary_dark">#5d4037</color>
+    <color name="primary">#795548</color>
+    <color name="primary_light">#d7ccc8</color>
+    <color name="orange">#ff8200</color>
+    <color name="orange_alpha">#66ff8200</color>
+    <color name="orange_dark">#d46303</color>
+
+    <color name="txt_black">#232323</color>
+    <color name="txt_gray">#565656</color>
+    <color name="txt_light_gray">#898989</color>
+
+    <color name="bg_grey">#DDDDDD</color>
+    <color name="text_white">#ffffff</color>
+    <color name="bg_gray">#96ffffff</color>
+    <color name="bg_gray_dark">#cdcdcd</color>
+    <color name="bg_agray">#49dddddd</color>
+    <color name="bg_gray_pressed">#46e8e8e8</color>
+    <color name="bg_white_100">#AAffffff</color>
+    <color name="bg_white_50">#32ffffff</color>
+    <color name="bg_white_30">#1effffff</color>
+    <color name="txt_at_blue">#0000ff</color>
+    <color name="divider_gray">#d7d7d7</color>
+    <color name="wt_gray">#dbdbdb</color>
+    <color name="wt_green_theme_400">#2baf2b</color>
+    <color name="wt_green_theme_300">#42bd41</color>
+    <color name="wt_green_theme_200">#72d572</color>
+    <color name="wt_green_theme_50">#d0f8ce</color>
+    <color name="wt_green_theme_10">#32d0f8ce</color>
+    <color name="wt_green_title_theme">#c5e1a5</color>
+    <color name="wt_login_gray_theme">#641f3827</color>
+    <color name="wt_theme">#ffffff</color>
+    <!--<color name="wt_theme_bg">#e0f2f1</color>-->
+    <color name="wt_theme_bg">#ffffff</color>
+    <color name="wt_theme_line">#a9b7b7</color>
+    <color name="wt_fab">#4CAF50</color>
+
+
+
+</resources>

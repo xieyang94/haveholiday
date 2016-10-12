@@ -1,0 +1,182 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/loginbg"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="30dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/title_back"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:background="@drawable/title_back_selecter" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="登录"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="30dip"
+                    android:layout_height="30dip" />
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="80dip" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/et_bg_grey"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/login_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dip"
+                    android:background="@color/transparent"
+                    android:hint="请输入您的邮箱"
+                    android:inputType="textEmailAddress"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/white"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/light_grey" />
+
+                <EditText
+                    android:id="@+id/login_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/transparent"
+                    android:hint="请输入您的密码"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:password="true"
+                    android:singleLine="true"
+                    android:textColorHint="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dip" />
+
+            <Button
+                android:id="@+id/bt_login"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/login_bt_login_selecter"
+
+                android:text="登  录"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip"
+                    android:text="免费注册"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_forgetpw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip"
+                    android:text="忘记密码？"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/user_instruction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip"
+                    android:text="用户说明"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

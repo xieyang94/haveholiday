@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.administrator.demo3">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon1"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        -->
+        <activity android:name="com.example.xieyang.aty.Welcome">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
+             ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.example.xieyang.aty.SumHoliday_Activity"
+            android:label="@string/title_activity_sum_holiday"
+            android:theme="@style/AppTheme" />
+        <activity android:name="com.example.xieyang.aty.Tool_time_of_other_Avtivity" />
+        <activity android:name="com.example.xieyang.aty.SquareContent_Activity" />
+        <activity android:name="com.example.xieyang.aty.Reply_Activity" />
+        <activity android:name="com.example.xieyang.aty.ReplyContent_Activity" />
+        <activity android:name="com.example.xieyang.aty.PersonInformation_Activity" />
+        <activity android:name="com.example.xieyang.aty.Register_Activity" />
+        <activity android:name="com.example.xieyang.aty.Tool_time_estimation_Activity" />
+        <activity android:name="com.example.xieyang.aty.Login_Activity" />
+        <activity android:name="com.example.xieyang.aty.ForgetPassword_Activity" />
+        <activity android:name="com.example.xieyang.aty.HolidayContent_Avtivity" />
+        <activity android:name="com.example.xieyang.aty.SumHoliday_month_Activity" />
+        <!-- <activity android:name="com.example.xieyang.aty.Welcome"></activity> -->
+        <activity android:name=".MainActivity" />
+        <activity android:name="com.example.xieyang.aty.Tool_other_festival_Activity" />
+
+        <receiver android:name=".MainActivity$MyBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.xieyang.xieyang" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.example.xieyang.aty.Reply_Activity$MyListBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.xieyang.xieyang1" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.example.xieyang.aty.SquareContent_Activity$MyListBroadcastReceiver1">
+            <intent-filter>
+                <action android:name="com.xieyang.xieyang2" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.example.xieyang.service.NotifyService" />
+
+        <receiver android:name="com.example.xieyang.broadcastreceiver.AlarmReceiver" />
+        <receiver android:name="com.example.xieyang.broadcastreceiver.NotifyReceiver">
+            <intent-filter>
+                <action android:name="com.xieyang.xieyang3" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.example.xieyang.aty.UserInstruction_Activity"></activity>
+    </application>
+
+</manifest>

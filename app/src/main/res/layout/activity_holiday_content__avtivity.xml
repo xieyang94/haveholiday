@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.example.xieyang.aty.HolidayContent_Avtivity">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="30dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/title_back"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:background="@drawable/title_back_selecter"/>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="节日介绍"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"/>
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="12" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/square_layout_title"
+                android:layout_width="match_parent"
+                android:layout_height="180dip" >
+
+                <ImageView
+                    android:id="@+id/festival_picture_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/holiday_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="150dip"
+                    android:padding="5dip"
+                    android:textColor="@color/white"
+                    android:background="@drawable/texttitlebg"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/festival_content_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:scrollbars="vertical"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:lineSpacingExtra="5dip"
+                android:singleLine="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/festival_content_textview2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:scrollbars="vertical"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:lineSpacingExtra="5dip"
+                android:singleLine="false"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/festival_content_textview3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:scrollbars="vertical"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:lineSpacingExtra="5dip"
+                android:singleLine="false"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/festival_content_textview4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:scrollbars="vertical"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:lineSpacingExtra="5dip"
+                android:singleLine="false"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/festival_content_textview5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:scrollbars="vertical"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:lineSpacingExtra="5dip"
+                android:singleLine="false"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/festival_content_textview6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:scrollbars="vertical"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:lineSpacingExtra="5dip"
+                android:singleLine="false"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/festival_content_textview7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:scrollbars="vertical"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:lineSpacingExtra="5dip"
+                android:singleLine="false"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

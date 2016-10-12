@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">有节日</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="txt_day">日期</string>
+    <string name="txt_month">月份</string>
+    <string name="txt_square">广场</string>
+    <string name="txt_tool">工具箱</string>
+    <string name="title_activity_sum_holiday">SumHoliday</string>
+    <string name="title_activity_reply1_">Reply1_Activity</string>
+    <string name="title_activity_sdf">sdf</string>
+
+</resources>
