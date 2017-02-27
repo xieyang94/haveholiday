@@ -12,7 +12,7 @@ import com.example.administrator.demo3.R;
 import com.example.xieyang.aty.Tool_other_festival_Activity;
 import com.example.xieyang.aty.Tool_time_estimation_Activity;
 import com.example.xieyang.aty.Tool_time_of_other_Avtivity;
-import com.example.xieyang.common.BaseFragment;
+import com.example.xieyang.base.BaseFragment;
 import com.example.xieyang.presenter.Frag_4_Presenter;
 import com.example.xieyang.view.Frag_4_View;
 

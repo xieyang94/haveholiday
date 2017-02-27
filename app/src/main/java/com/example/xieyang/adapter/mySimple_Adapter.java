@@ -18,6 +18,7 @@ import com.example.xieyang.aty.SumHoliday_Activity;
 import com.example.xieyang.frags.Frag_home;
 import com.example.xieyang.utils.GetHolidayName;
 import com.example.xieyang.utils.Lunar;
+import com.example.xieyang.utils.ShowLog;
 import com.example.xieyang.utils.Solar;
 import com.example.xieyang.utils._24SolarTerms;
 
@@ -136,7 +137,7 @@ public class mySimple_Adapter extends BaseAdapter {
             every_day = "" + i;
             holder.tv.setText("" + i);
             String str = "" + year + "年" + month + "月" + i + "日";
-//            System.out.println(str);
+//            ShowLog.showTag(str);
             Calendar today = Calendar.getInstance();
             try {
                 today.setTime(chineseDateFormat.parse(str));
@@ -166,8 +167,8 @@ public class mySimple_Adapter extends BaseAdapter {
                 String solarstr=""+sol+"        "+month+"月"+i+"日";
                 solarTerm.append(solarstr);
                 solarTerm.append(",");
-//                System.out.println(""+sol+month+"月"+i+"日"+"24节气");
-                System.out.println(""+solarTerm+"24节气");
+//                ShowLog.showTag(""+sol+month+"月"+i+"日"+"24节气");
+                ShowLog.showTag(""+solarTerm+"24节气");
             }
 //            solarTerm.substring(0,solarTerm.length()-1);
 
@@ -176,7 +177,7 @@ public class mySimple_Adapter extends BaseAdapter {
             lmonth = Lunar.chineseNumber[lunar.getMonth1() - 1];
             lday = Lunar.getChinaDayString(lunar.getDay1());
             lunar_holiday.append(lmonth+"月"+lday+",");
-//            System.out.println("----------农历月-------" + lmonth + "农历日" + lday + "---------");
+//            ShowLog.showTag("----------农历月-------" + lmonth + "农历日" + lday + "---------");
             // 确定除夕
             int dayofchuxi = Lunar.monthDays(lunar.getYear1(), lunar.getMonth1());
             String str1 = "";
@@ -190,7 +191,7 @@ public class mySimple_Adapter extends BaseAdapter {
                 holder.ishave = true;
                 holder.tv1.setTextColor(Color.CYAN);
                 lunar_chuxi.append(lmonth + "月" + str1);
-//                System.out.println(lmonth + "月" + str1+"除夕--------------------------");
+//                ShowLog.showTag(lmonth + "月" + str1+"除夕--------------------------");
             }
             //阴历节日
             if (getHolidayName.getLunarHoliday(lmonth, lday,"","").equals("")) {
@@ -219,7 +220,7 @@ public class mySimple_Adapter extends BaseAdapter {
                 if (holder.isHave() == true) {
                     Intent intent = new Intent(context, SumHoliday_Activity.class);
 //					intent.putExtra("name",""+lmonth+"月"+lday+"日"+"阳历"+every_day);
-//                    System.out.println("" + lmonth + "月" + lday + "日" + "阳历" + every_day+"阳历"+str+"阴历"+str1);
+//                    ShowLog.showTag("" + lmonth + "月" + lday + "日" + "阳历" + every_day+"阳历"+str+"阴历"+str1);
 
                     intent.putExtra("month", "" + every_month);
                     intent.putExtra("year", "" + year);
@@ -241,7 +242,7 @@ public class mySimple_Adapter extends BaseAdapter {
                 && year == solar.StrToInt(solar.nowYear())
                 && month == solar.StrToInt(solar.nowMonth())) {
             // holder.layout.setBackgroundColor(Color.CYAN);
-//            System.out.println("------------------------------------------------------------------当前天"+j);
+//            ShowLog.showTag("------------------------------------------------------------------当前天"+j);
             holder.tv.setTextColor(Color.BLUE);
             holder.tv1.setTextColor(Color.BLUE);
             Config.HOLDER=holder.ishave;

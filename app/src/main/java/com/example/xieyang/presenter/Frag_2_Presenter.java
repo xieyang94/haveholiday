@@ -5,6 +5,7 @@ import com.example.xieyang.entity.PushedFestival;
 import com.example.xieyang.net.NetWork;
 import com.example.xieyang.respmodule.PictureDirectRespData;
 import com.example.xieyang.respmodule.PushedFestivalRespData;
+import com.example.xieyang.utils.ShowLog;
 import com.example.xieyang.view.Frag_2_View;
 import com.hannesdorfmann.mosby.mvp.MvpBasePresenter;
 
@@ -49,13 +50,13 @@ public class Frag_2_Presenter extends MvpBasePresenter<Frag_2_View> {
                                         break;
                         }
 
-                        System.out.println("请求服务器成功");
+                        ShowLog.showTag("请求服务器成功");
                 }
 
                 @Override
                 public void onError(Throwable e) {
                         getView().failedLink();
-                        System.out.println(e.toString()+"服务器毛病---------------+++++++++++++++");
+                        ShowLog.showTag(e.toString()+"服务器毛病---------------+++++++++++++++");
                 }
         };
 
@@ -94,13 +95,13 @@ public class Frag_2_Presenter extends MvpBasePresenter<Frag_2_View> {
                                         break;
                         }
 
-                        System.out.println("请求服务器成功");
+                        ShowLog.showTag("请求服务器成功");
                 }
 
                 @Override
                 public void onError(Throwable e) {
                         getView().failedLink();
-                        System.out.println(e.toString()+"服务器毛病---------------+++++++++++++++");
+                        ShowLog.showTag(e.toString()+"服务器毛病---------------+++++++++++++++");
                 }
         };
 

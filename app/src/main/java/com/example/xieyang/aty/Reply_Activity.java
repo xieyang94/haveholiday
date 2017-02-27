@@ -18,10 +18,11 @@ import android.widget.Toast;
 import com.example.administrator.demo3.R;
 import com.example.xieyang.Config;
 import com.example.xieyang.adapter.Reply_Adapter;
-import com.example.xieyang.common.BaseActivity;
+import com.example.xieyang.base.BaseActivity;
 import com.example.xieyang.entity.ReplyItemContent;
 import com.example.xieyang.presenter.Reply_Presenter;
 import com.example.xieyang.utils.PTRUtil;
+import com.example.xieyang.utils.ShowLog;
 import com.example.xieyang.view.Reply_View;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
@@ -79,8 +80,8 @@ public class Reply_Activity extends BaseActivity<Reply_View,Reply_Presenter> imp
 //        list_reply.setAdapter(reply_adapter);
         mListView.setAdapter(reply_adapter);
         pushedfestivalId=getIntent().getStringExtra("push_festival_ID");
-        System.out.println("评论界面------->当前推送节日ID" + pushedfestivalId);
-        System.out.println(Config.UPLIST+"-----------------------------------------------------------------");
+        ShowLog.showTag("评论界面------->当前推送节日ID" + pushedfestivalId);
+        ShowLog.showTag(Config.UPLIST+"-----------------------------------------------------------------");
        getPresenter().showreplyList(pushedfestivalId,upCount);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -119,16 +120,16 @@ public class Reply_Activity extends BaseActivity<Reply_View,Reply_Presenter> imp
                     PullToRefreshBase<ListView> refreshView) {
                 // 上拉的时候操作
                 Config.replyCount=replys.size();
-                System.out.println(Config.replyCount+"-----------Config.replyCount测试数据------------------------------");
-                System.out.println(othersize+"-----------othersize测试数据------------------------------");
+                ShowLog.showTag(Config.replyCount+"-----------Config.replyCount测试数据------------------------------");
+                ShowLog.showTag(othersize+"-----------othersize测试数据------------------------------");
                 if(othersize==0){
                     downCount=Config.replyCount+10;
                 }else {
                     downCount += 10;
-                    System.out.println(downCount+"--------------downCount测试数据1----------------------");
+                    ShowLog.showTag(downCount+"--------------downCount测试数据1----------------------");
                 }
 //                replys.clear();
-                System.out.println(downCount+"--------------downCount测试数据2----------------------");
+                ShowLog.showTag(downCount+"--------------downCount测试数据2----------------------");
                 getPresenter().showreplyList(pushedfestivalId,downCount);
 
 
@@ -158,7 +159,7 @@ public class Reply_Activity extends BaseActivity<Reply_View,Reply_Presenter> imp
         for (ReplyItemContent m:  listReplyContent) {
             replys.add(m);
         }
-        System.out.println("showData  "+listReplyContent.size()+" ----- "+replys.size());
+        ShowLog.showTag("showData  "+listReplyContent.size()+" ----- "+replys.size());
         Config.replyCount=replys.size();
         othersize=listReplyContent.size();
         reply_adapter.notifyDataSetChanged();
@@ -167,7 +168,7 @@ public class Reply_Activity extends BaseActivity<Reply_View,Reply_Presenter> imp
     @Override
     public void successRefresh() {
 //        mSwipeLayout.setRefreshing(false);
-        System.out.println("完成");
+        ShowLog.showTag("完成");
     }
 
     @Override
@@ -204,7 +205,7 @@ public class Reply_Activity extends BaseActivity<Reply_View,Reply_Presenter> imp
     public static class MyListBroadcastReceiver extends BroadcastReceiver{
         @Override
         public void onReceive(Context context, Intent intent) {
-            System.out.println("------------------通过广播刷新--------------------------");
+            ShowLog.showTag("------------------通过广播刷新--------------------------");
 //            downCount=Config.replyCount;
         }
 

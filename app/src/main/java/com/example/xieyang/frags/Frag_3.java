@@ -12,9 +12,10 @@ import android.widget.Toast;
 import com.example.administrator.demo3.R;
 import com.example.xieyang.Config;
 import com.example.xieyang.adapter.Squaqre_Adapter;
-import com.example.xieyang.common.BaseFragment;
+import com.example.xieyang.base.BaseFragment;
 import com.example.xieyang.entity.PushedFestival;
 import com.example.xieyang.presenter.Frag_3_Presenter;
+import com.example.xieyang.utils.ShowLog;
 import com.example.xieyang.view.Frag_3_View;
 
 import java.util.ArrayList;
@@ -67,14 +68,14 @@ public class Frag_3 extends BaseFragment<Frag_3_View, Frag_3_Presenter> implemen
         for (PushedFestival m:  list_pushedFestival) {
             pushedFestivals.add(m);
         }
-        System.out.println("showData  "+list_pushedFestival.size()+" ----- "+pushedFestivals.size());
+        ShowLog.showTag("showData  "+list_pushedFestival.size()+" ----- "+pushedFestivals.size());
         squaqre_adapter.notifyDataSetChanged();
     }
 
     @Override
     public void successRefresh() {
         mSwipeLayout.setRefreshing(false);
-        System.out.println("完成");
+        ShowLog.showTag("完成");
     }
 
     @Override

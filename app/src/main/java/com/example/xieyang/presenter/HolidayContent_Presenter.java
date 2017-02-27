@@ -4,6 +4,7 @@ import com.example.xieyang.Config;
 import com.example.xieyang.entity.Festival;
 import com.example.xieyang.net.NetWork;
 import com.example.xieyang.respmodule.FestivalRespData;
+import com.example.xieyang.utils.ShowLog;
 import com.example.xieyang.view.HolidayContent_View;
 import com.hannesdorfmann.mosby.mvp.MvpBasePresenter;
 
@@ -46,14 +47,14 @@ public class HolidayContent_Presenter extends MvpBasePresenter<HolidayContent_Vi
                     break;
             }
 
-            System.out.println("请求服务器成功");
+            ShowLog.showTag("请求服务器成功");
         }
 
         @Override
         public void onError(Throwable e) {
             getView().hideLoading();
             getView().failedLink();
-            System.out.println(e.toString() + "服务器请求失败或者服务器异常!!!--------HolidayContent_Presenter");
+            ShowLog.showTag(e.toString() + "服务器请求失败或者服务器异常!!!--------HolidayContent_Presenter");
 
         }
     };

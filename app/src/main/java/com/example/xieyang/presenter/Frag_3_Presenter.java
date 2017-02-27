@@ -3,6 +3,7 @@ package com.example.xieyang.presenter;
 import com.example.xieyang.entity.PushedFestival;
 import com.example.xieyang.net.NetWork;
 import com.example.xieyang.respmodule.PushedFestivalRespData;
+import com.example.xieyang.utils.ShowLog;
 import com.example.xieyang.view.Frag_3_View;
 import com.hannesdorfmann.mosby.mvp.MvpBasePresenter;
 
@@ -31,7 +32,7 @@ public class Frag_3_Presenter extends MvpBasePresenter<Frag_3_View> {
         public void onNext(PushedFestivalRespData respData) {
             code = respData.code;
             pushedFestivals_list=respData.data;
-            System.out.println(respData.data+"  qqqq--------------+++++++++++++++");
+            ShowLog.showTag(respData.data+"  qqqq--------------+++++++++++++++");
         }
 
         @Override
@@ -51,7 +52,7 @@ public class Frag_3_Presenter extends MvpBasePresenter<Frag_3_View> {
                     break;
             }
 
-            System.out.println("请求服务器成功");
+            ShowLog.showTag("请求服务器成功");
         }
 
         @Override
@@ -59,7 +60,7 @@ public class Frag_3_Presenter extends MvpBasePresenter<Frag_3_View> {
             getView().hideLoading();
             getView().failedLink();
             getView().successRefresh();
-            System.out.println(e.toString()+"服务器毛病---------------+++++++++++++++");
+            ShowLog.showTag(e.toString()+"服务器毛病---------------+++++++++++++++");
         }
     };
 

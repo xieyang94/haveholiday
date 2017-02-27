@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    buildToolsVersion "25.0.1"
 
     defaultConfig {
         applicationId "com.example.administrator.demo3"
@@ -39,6 +39,11 @@ dependencies {
     compile 'com.hannesdorfmann.mosby:viewstate:2.0.1'
 
     compile project(':library')
+
+//月份--convenientbanner
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+//回复--eventbus
+    compile 'org.greenrobot:eventbus:3.0.0'
 
 }
 

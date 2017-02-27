@@ -12,10 +12,11 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.example.administrator.demo3.R;
 import com.example.xieyang.Config;
-import com.example.xieyang.common.BaseActivity;
+import com.example.xieyang.base.BaseActivity;
 import com.example.xieyang.entity.Festival;
 import com.example.xieyang.presenter.HolidayContent_Presenter;
 import com.example.xieyang.utils.ResultNull;
+import com.example.xieyang.utils.ShowLog;
 import com.example.xieyang.view.HolidayContent_View;
 
 import java.util.StringTokenizer;
@@ -65,7 +66,7 @@ public class HolidayContent_Avtivity extends BaseActivity<HolidayContent_View,Ho
             i++;
 //            arr.add(st.nextToken() + "      " + str + "月" + i + "日");
         }
-        System.out.println("festival_arr[0]=" + festival_arr[0] + "festival_arr[1]=" + festival_arr[1] + "-----------------+++++++++++");
+        ShowLog.showTag("festival_arr[0]=" + festival_arr[0] + "festival_arr[1]=" + festival_arr[1] + "-----------------+++++++++++");
 
         getPresenter().showFestival(festival_arr[0], festival_arr[1]);
 //        festival_content_textview.setText("" + Config.FESTIVALGET.getFestivalContent());

@@ -18,11 +18,18 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.example.administrator.demo3.R;
 import com.example.xieyang.Config;
-import com.example.xieyang.common.BaseActivity;
+import com.example.xieyang.base.BaseActivity;
+import com.example.xieyang.evenbus.ReplyEven;
 import com.example.xieyang.presenter.SquareContent_Presenter;
 import com.example.xieyang.utils.ResultNull;
+import com.example.xieyang.utils.ShowLog;
 import com.example.xieyang.utils.ToSampleTime;
 import com.example.xieyang.view.SquareContent_View;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+
+import static com.example.xieyang.utils.ShowLog.showTag;
 
 public class SquareContent_Activity extends BaseActivity<SquareContent_View, SquareContent_Presenter> implements SquareContent_View ,View.OnClickListener{
     private ImageView pf_ContentBg,title_back,pf_Content2, pf_Content4 , pf_Content6;
@@ -153,6 +160,7 @@ public class SquareContent_Activity extends BaseActivity<SquareContent_View, Squ
         setContentView(R.layout.activity_square_content);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        EventBus.getDefault().register(this);
         init();
         pd.show();
         getfromIntent();
@@ -164,7 +172,7 @@ public class SquareContent_Activity extends BaseActivity<SquareContent_View, Squ
             getPresenter().checkToken(Config.USERGET.getUserEmail(), Config.USERGET.getUserPassword(), Config.USERGET.getToken());
         }
         showPFContent();
-        System.out.println("推送节日内容界面------->当前推送节日ID" + pushedfestivalId + pushfestivalTime);
+        ShowLog.showTag("推送节日内容界面------->当前推送节日ID" + pushedfestivalId + pushfestivalTime);
         reply.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -242,11 +250,26 @@ public class SquareContent_Activity extends BaseActivity<SquareContent_View, Squ
     public static class MyListBroadcastReceiver1 extends BroadcastReceiver {
         @Override
         public void onReceive(Context context, Intent intent) {
-            System.out.println("------------------通过广播刷新--------------------------Config.replyCount="+Config.replyCount);
+            ShowLog.showTag("TAG","------------------通过广播刷新--------------------------Config.replyCount="+Config.replyCount);
 //            downCount=Config.replyCount;
             reply_Count.setText("回复(" + Config.replyCount + ")");
         }
 
     }
 
+    /**
+     * 回复成功后，数据+1
+     * @param replyEven
+     */
+    @Subscribe
+    public void on(ReplyEven replyEven){
+        int times=Config.replyCount+1;
+        reply_Count.setText("回复(" + times + ")");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);//反注册EventBus
+    }
 }

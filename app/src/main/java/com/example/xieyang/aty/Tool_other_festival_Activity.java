@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.example.administrator.demo3.R;
-import com.example.xieyang.common.BaseActivity;
+import com.example.xieyang.base.BaseActivity;
 import com.example.xieyang.presenter.Tool_other_festival_Presenter;
 import com.example.xieyang.view.Tool_other_festival_View;
 

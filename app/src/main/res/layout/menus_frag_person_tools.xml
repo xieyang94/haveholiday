@@ -15,22 +15,22 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
-        <TableRow android:background="@color/white" >
+        <TableRow android:background="@color/white">
 
             <LinearLayout
                 android:id="@+id/time_of_other_layout"
                 android:layout_width="0dip"
                 android:layout_height="110dip"
                 android:layout_weight="1"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="55dip"
                     android:layout_weight="1"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="32dip"
@@ -45,7 +45,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="55dip"
                     android:layout_weight="1"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -68,13 +68,13 @@
                 android:layout_width="0dip"
                 android:layout_height="110dip"
                 android:layout_weight="1"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="55dip"
                     android:layout_weight="1"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="32dip"
@@ -89,7 +89,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="55dip"
                     android:layout_weight="1"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -112,13 +112,13 @@
                 android:layout_width="0dip"
                 android:layout_height="110dip"
                 android:layout_weight="1"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="55dip"
                     android:layout_weight="1"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="30dip"
@@ -132,7 +132,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="55dip"
                     android:layout_weight="1"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -151,20 +151,22 @@
             android:layout_height="1dip"
             android:background="@color/light_grey2" />
 
-        <TableRow android:background="@color/white" >
+        <TableRow
+            android:background="@color/white"
+            android:visibility="gone">
 
             <LinearLayout
                 android:id="@+id/time_of_constellation_layout"
                 android:layout_width="0dip"
                 android:layout_height="110dip"
                 android:layout_weight="1"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="55dip"
                     android:layout_weight="1"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="32dip"
@@ -179,7 +181,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="55dip"
                     android:layout_weight="1"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -202,13 +204,13 @@
                 android:layout_width="0dip"
                 android:layout_height="110dip"
                 android:layout_weight="1"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="55dip"
                     android:layout_weight="1"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="32dip"
@@ -223,7 +225,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="55dip"
                     android:layout_weight="1"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"

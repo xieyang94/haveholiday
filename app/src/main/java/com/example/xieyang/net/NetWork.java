@@ -21,7 +21,7 @@ public class NetWork {
     private static Converter.Factory gsonConverterFactory = GsonConverterFactory.create();
     private static CallAdapter.Factory rxJavaCallAdapterFactory = RxJavaCallAdapterFactory.create();
     //private static String WEITAOURL = "http://121.42.205.111:80/";
-    private static String WEITAOURL = "http://115.28.175.118:80/";
+    private static String WEITAOURL = "http://121.42.189.76:80/";
 
 
 

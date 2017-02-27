@@ -4,6 +4,7 @@ import com.example.xieyang.Config;
 import com.example.xieyang.entity.ReplyItemContent;
 import com.example.xieyang.net.NetWork;
 import com.example.xieyang.respmodule.RespDataStr;
+import com.example.xieyang.utils.ShowLog;
 import com.example.xieyang.view.SquareContent_View;
 import com.hannesdorfmann.mosby.mvp.MvpBasePresenter;
 
@@ -51,7 +52,7 @@ public class SquareContent_Presenter extends MvpBasePresenter<SquareContent_View
         @Override
         public void onError(Throwable e) {
             getView().hideLoading();
-            System.out.println(e.toString() + "服务器请求失败或者服务器异常!!!--------SquareContent_Presenter1");
+            ShowLog.showTag(e.toString() + "服务器请求失败或者服务器异常!!!--------SquareContent_Presenter1");
         }
     };
 
@@ -99,7 +100,7 @@ public class SquareContent_Presenter extends MvpBasePresenter<SquareContent_View
         @Override
         public void onError(Throwable e) {
 //            getView().hideLoading();
-            System.out.println(e.toString() + "服务器请求失败或者服务器异常!!!--------SquareContent_Presenter2");
+            ShowLog.showTag(e.toString() + "服务器请求失败或者服务器异常!!!--------SquareContent_Presenter2");
         }
     };
 
@@ -128,7 +129,7 @@ public class SquareContent_Presenter extends MvpBasePresenter<SquareContent_View
         public void onNext(RespDataStr respData) {
             code2 = respData.code;
             reStr2 = respData.data;
-            System.out.println("获取数据成功on--------------回复总数");
+            ShowLog.showTag("获取数据成功on--------------回复总数");
 
         }
         @Override
@@ -149,7 +150,7 @@ public class SquareContent_Presenter extends MvpBasePresenter<SquareContent_View
         @Override
         public void onError(Throwable e) {
 //            getView().hideLoading();
-            System.out.println(e.toString() + "服务器请求失败或者服务器异常!!!--------SquareContent_Presenter3");
+            ShowLog.showTag(e.toString() + "服务器请求失败或者服务器异常!!!--------SquareContent_Presenter3");
         }
     };
 

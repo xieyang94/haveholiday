@@ -15,9 +15,10 @@ import android.widget.Toast;
 
 import com.example.administrator.demo3.MainActivity;
 import com.example.administrator.demo3.R;
-import com.example.xieyang.common.BaseActivity;
+import com.example.xieyang.base.BaseActivity;
 import com.example.xieyang.entity.User;
 import com.example.xieyang.presenter.Login_Presenter;
+import com.example.xieyang.utils.ShowLog;
 import com.example.xieyang.view.Login_View;
 
 /**
@@ -85,7 +86,7 @@ public class Login_Activity extends BaseActivity<Login_View, Login_Presenter> im
 //        Toast.makeText(Login_Activity.this,"登录成功"+data.toString(),Toast.LENGTH_SHORT).show();
         MainActivity.mainActivityL.finish();
         finish();
-        System.out.println(data.toString());
+        ShowLog.showTag(data.toString());
     }
 
     @Override

@@ -21,6 +21,7 @@ import com.example.administrator.demo3.R;
 import com.example.xieyang.aty.SquareContent_Activity;
 import com.example.xieyang.entity.PushedFestival;
 import com.example.xieyang.utils.ResultNull;
+import com.example.xieyang.utils.ShowLog;
 
 import java.util.List;
 
@@ -84,7 +85,7 @@ public class Squaqre_Adapter extends BaseAdapter {
                 .crossFade()//淡入淡出
 //                .error(R.mipmap.error)//加载失败时，显示默认图片
                 .into(zujian.square_image);
-        System.out.println("1234567============");
+        ShowLog.showTag("1234567============");
         zujian.square_layout.setOnClickListener(new OnClickListener() {
 
             @Override

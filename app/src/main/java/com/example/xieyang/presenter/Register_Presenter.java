@@ -3,6 +3,7 @@ package com.example.xieyang.presenter;
 import com.example.xieyang.entity.User;
 import com.example.xieyang.net.NetWork;
 import com.example.xieyang.respmodule.RespDataStr;
+import com.example.xieyang.utils.ShowLog;
 import com.example.xieyang.view.Register_View;
 import com.hannesdorfmann.mosby.mvp.MvpBasePresenter;
 
@@ -141,7 +142,7 @@ public class Register_Presenter extends MvpBasePresenter<Register_View> {
         body1.clear();
         body1.put("emails", email);
         body1.put("codes", codes);
-        System.out.println("发送验证码=123=====" + email + codes);
+        ShowLog.showTag("发送验证码=123=====" + email + codes);
         subscription1 = NetWork.getUserService().sendCode(body1).subscribeOn(Schedulers.io()).
                 observeOn(AndroidSchedulers.mainThread()).subscribe(sendCode);
 

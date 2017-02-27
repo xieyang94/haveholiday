@@ -31,7 +31,7 @@ import com.bumptech.glide.RequestManager;
 import com.example.xieyang.Config;
 import com.example.xieyang.aty.Login_Activity;
 import com.example.xieyang.aty.PersonInformation_Activity;
-import com.example.xieyang.common.BaseActivity;
+import com.example.xieyang.base.BaseActivity;
 import com.example.xieyang.entity.User;
 import com.example.xieyang.frags.Frag_2;
 import com.example.xieyang.frags.Frag_3;
@@ -40,6 +40,7 @@ import com.example.xieyang.frags.Frag_home;
 import com.example.xieyang.presenter.MainActivity_Presenter;
 import com.example.xieyang.utils.GlideCircleTransform;
 import com.example.xieyang.utils.SelectPicPopupWindow;
+import com.example.xieyang.utils.ShowLog;
 import com.example.xieyang.utils.UriTopath;
 import com.example.xieyang.view.MainActivity_View;
 
@@ -331,7 +332,7 @@ public class MainActivity extends BaseActivity<MainActivity_View,MainActivity_Pr
                 if (data != null) {
                     Bundle extras = data.getExtras();
                     head = extras.getParcelable("data");
-                    System.out.println("---------------------头像--------------="+head);
+                    ShowLog.showTag("---------------------头像--------------="+head);
                     if (head != null) {
 
                         Uri uri = Uri.parse(MediaStore.Images.Media.insertImage(getContentResolver(), head, null, null));

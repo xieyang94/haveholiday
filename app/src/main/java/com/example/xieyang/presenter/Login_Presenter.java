@@ -4,6 +4,7 @@ import com.example.xieyang.Config;
 import com.example.xieyang.entity.User;
 import com.example.xieyang.net.NetWork;
 import com.example.xieyang.respmodule.RespData;
+import com.example.xieyang.utils.ShowLog;
 import com.example.xieyang.view.Login_View;
 import com.hannesdorfmann.mosby.mvp.MvpBasePresenter;
 
@@ -31,7 +32,7 @@ public class Login_Presenter extends MvpBasePresenter<Login_View>{
             code = respData.code;
             fromServer = respData.data;
             Config.USERGET = respData.data;
-            System.out.println(code+"----------------------------------code'"+Config.USERGET.getToken());
+            ShowLog.showTag(code+"----------------------------------code'"+Config.USERGET.getToken());
         }
         @Override
         public void onCompleted() {
@@ -44,7 +45,7 @@ public class Login_Presenter extends MvpBasePresenter<Login_View>{
                 case 404:
                     getView().fLogin();
                     getView().hideLoading();
-                    System.out.println("222222222222222222222222222222222    404");
+                    ShowLog.showTag("222222222222222222222222222222222    404");
                     break;
             }
 
@@ -54,8 +55,8 @@ public class Login_Presenter extends MvpBasePresenter<Login_View>{
             getView().hideLoading();
             getView().failedLink();
 
-            System.out.println("222222222222222222222222222222222    直接失败"+"code"+code);
-            System.out.println(e.toString() + "服务器请求失败或者服务器异常!!!--------Login_Presenter");
+            ShowLog.showTag("222222222222222222222222222222222    直接失败"+"code"+code);
+            ShowLog.showTag(e.toString() + "服务器请求失败或者服务器异常!!!--------Login_Presenter");
         }
     };
 

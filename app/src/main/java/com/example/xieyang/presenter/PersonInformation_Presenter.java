@@ -4,6 +4,7 @@ import com.example.xieyang.Config;
 import com.example.xieyang.entity.User;
 import com.example.xieyang.net.NetWork;
 import com.example.xieyang.respmodule.RespData;
+import com.example.xieyang.utils.ShowLog;
 import com.example.xieyang.view.PersonInformation_View;
 import com.hannesdorfmann.mosby.mvp.MvpBasePresenter;
 
@@ -54,7 +55,7 @@ public class PersonInformation_Presenter extends MvpBasePresenter<PersonInformat
         public void onError(Throwable e) {
             getView().hideLoading();
             getView().failedLink();
-            System.out.println(e.toString() + "服务器请求失败或者服务器异常!!!--------PersonInformation_Presenter");
+            ShowLog.showTag(e.toString() + "服务器请求失败或者服务器异常!!!--------PersonInformation_Presenter");
 
         }
     };

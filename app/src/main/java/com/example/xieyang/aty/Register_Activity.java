@@ -16,8 +16,9 @@ import android.widget.Toast;
 import com.example.administrator.demo3.MainActivity;
 import com.example.administrator.demo3.R;
 import com.example.xieyang.Config;
-import com.example.xieyang.common.BaseActivity;
+import com.example.xieyang.base.BaseActivity;
 import com.example.xieyang.presenter.Register_Presenter;
+import com.example.xieyang.utils.ShowLog;
 import com.example.xieyang.view.Register_View;
 
 import java.util.Random;
@@ -157,7 +158,7 @@ public class Register_Activity extends BaseActivity<Register_View,Register_Prese
                 for(int i=0;i<6;i++){
                     str+=random.nextInt(10);
                 }
-                System.out.println("发送验证码======" + register_user.getText().toString() + str);
+                ShowLog.showTag("发送验证码======" + register_user.getText().toString() + str);
                 Config.Codes=str;
                 if(register_user.getText().toString().equals("")){
                     Toast.makeText(Register_Activity.this, "邮箱不能为空", Toast.LENGTH_SHORT).show();

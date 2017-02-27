@@ -4,6 +4,7 @@ import com.example.xieyang.Config;
 import com.example.xieyang.aty.ReplyContent_Activity;
 import com.example.xieyang.net.NetWork;
 import com.example.xieyang.respmodule.RespDataStr;
+import com.example.xieyang.utils.ShowLog;
 import com.example.xieyang.view.ReplyContent_View;
 import com.hannesdorfmann.mosby.mvp.MvpBasePresenter;
 
@@ -32,7 +33,7 @@ public class ReplyContent_Presenter extends MvpBasePresenter<ReplyContent_View> 
             code = respData.code;
             reStr = respData.data;
             Config.replyCount=Integer.parseInt(reStr);
-            System.out.println("----------------------------------------reStr="+reStr);
+            ShowLog.showTag("----------------------------------------reStr="+reStr);
         }
         @Override
         public void onCompleted() {
@@ -45,22 +46,22 @@ public class ReplyContent_Presenter extends MvpBasePresenter<ReplyContent_View> 
                     // 在Presenter中引用View时，一定要判断是否非空，因为这个View是WeakReference弱引用，不进行判断的话会产生空指针异常。
                     // 这是这个框架不好的地方，需要多次重复判空。
                     if(getView()==null){
-                        System.out.println("评论成功，请下拉刷新查看!!!");
+                        ShowLog.showTag("评论成功，请下拉刷新查看!!!");
                     }else{
                         getView().successReply();
                     }
-                    System.out.println("获取数据成功------------jintian今天");
+                    ShowLog.showTag("获取数据成功------------jintian今天");
                     break;
                 case 404:
                     getView().twoUser();
-                    System.out.println("获取数据失败--------------今天");
+                    ShowLog.showTag("获取数据失败--------------今天");
                     break;
             }
 
         }
         @Override
         public void onError(Throwable e) {
-            System.out.println(e.toString() + "服务器请求失败或者服务器异常!!!--------ReplyContent_Presenter");
+            ShowLog.showTag(e.toString() + "服务器请求失败或者服务器异常!!!--------ReplyContent_Presenter");
         }
     };
 

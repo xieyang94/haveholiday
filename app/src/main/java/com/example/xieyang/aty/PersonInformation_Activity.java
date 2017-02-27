@@ -22,7 +22,7 @@ import android.widget.Toast;
 
 import com.example.administrator.demo3.R;
 import com.example.xieyang.Config;
-import com.example.xieyang.common.BaseActivity;
+import com.example.xieyang.base.BaseActivity;
 import com.example.xieyang.entity.User;
 import com.example.xieyang.presenter.PersonInformation_Presenter;
 import com.example.xieyang.utils.PopWindow_pf_sex;

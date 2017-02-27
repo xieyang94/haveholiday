@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.administrator.demo3.R;
-import com.example.xieyang.common.BaseActivity;
+import com.example.xieyang.base.BaseActivity;
 import com.example.xieyang.presenter.Tool_time_estimation_Presenter;
 import com.example.xieyang.utils.DateUtils;
 import com.example.xieyang.utils.OtherUtils;

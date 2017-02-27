@@ -15,7 +15,7 @@ import android.widget.Toast;
 import com.example.administrator.demo3.MainActivity;
 import com.example.administrator.demo3.R;
 import com.example.xieyang.Config;
-import com.example.xieyang.common.BaseActivity;
+import com.example.xieyang.base.BaseActivity;
 import com.example.xieyang.presenter.ForgetPassword_Presenter;
 import com.example.xieyang.view.ForgetPassword_View;
 

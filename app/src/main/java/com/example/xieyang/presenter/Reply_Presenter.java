@@ -3,6 +3,7 @@ package com.example.xieyang.presenter;
 import com.example.xieyang.entity.ReplyItemContent;
 import com.example.xieyang.net.NetWork;
 import com.example.xieyang.respmodule.ReplyRespData;
+import com.example.xieyang.utils.ShowLog;
 import com.example.xieyang.view.Reply_View;
 import com.hannesdorfmann.mosby.mvp.MvpBasePresenter;
 
@@ -30,7 +31,7 @@ public class Reply_Presenter extends MvpBasePresenter<Reply_View>{
         public void onNext(ReplyRespData respData) {
             code = respData.code;
             replyItemContents = respData.data;
-            System.out.println(replyItemContents.size()+"-----------------答案是多少？-------------");
+            ShowLog.showTag(replyItemContents.size()+"-----------------答案是多少？-------------");
         }
         @Override
         public void onCompleted() {
@@ -54,7 +55,7 @@ public class Reply_Presenter extends MvpBasePresenter<Reply_View>{
             getView().hideLoading();
             getView().failedLink();
             getView().successRefresh();
-            System.out.println(e.toString() + "服务器请求失败或者服务器异常!!!--------Login_Presenter");
+            ShowLog.showTag(e.toString() + "服务器请求失败或者服务器异常!!!--------Login_Presenter");
         }
     };
 

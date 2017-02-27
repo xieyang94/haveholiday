@@ -38,4 +38,25 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--月份中月份的字体样式-->
+    <style name="monthTextStyle">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">90dip</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!--月份中竖着的间隔线-->
+    <style name="viewLine1">
+        <item name="android:layout_width">1dip</item>
+        <item name="android:layout_height">90dip</item>
+        <item name="android:background">@color/light_grey2</item>
+    </style>
+    <!--月份中横着的间隔线-->
+    <style name="viewLine2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dip</item>
+        <item name="android:background">@color/light_grey2</item>
+    </style>
 </resources>

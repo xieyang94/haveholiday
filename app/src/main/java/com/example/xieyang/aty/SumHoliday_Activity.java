@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.example.administrator.demo3.R;
-import com.example.xieyang.common.BaseActivity;
+import com.example.xieyang.base.BaseActivity;
 import com.example.xieyang.presenter.SumHoliday_Presenter;
 import com.example.xieyang.utils.GetHolidayName;
 import com.example.xieyang.view.SumHoliday_View;

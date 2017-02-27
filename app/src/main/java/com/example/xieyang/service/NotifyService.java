@@ -10,6 +10,7 @@ import android.support.annotation.Nullable;
 
 import com.example.xieyang.Config;
 import com.example.xieyang.broadcastreceiver.AlarmReceiver;
+import com.example.xieyang.utils.ShowLog;
 import com.example.xieyang.utils.Solar;
 
 import java.util.Calendar;
@@ -29,21 +30,21 @@ public class NotifyService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        System.out.println("服务开启");
+        ShowLog.showTag("服务开启");
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        System.out.println("服务运行");
+        ShowLog.showTag("服务运行");
 //        Intent intentL=new Intent();
 //        intentL.setAction("com.xieyang.xieyang4");
 //        sendBroadcast(intentL);
-        System.out.println("----------今天有节日吗???----------"+ Config.HOLDER);
+        ShowLog.showTag("----------今天有节日吗???----------"+ Config.HOLDER);
 
         new Thread(new Runnable() {
             @Override
             public void run() {
-                System.out.println("定时任务--------------------------");
+                ShowLog.showTag("定时任务--------------------------");
                 /**
                  * 发节日通告
                  */
@@ -74,6 +75,6 @@ public class NotifyService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        System.out.println("服务销毁");
+        ShowLog.showTag("服务销毁");
     }
 }

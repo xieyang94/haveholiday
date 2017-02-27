@@ -6,6 +6,7 @@ import android.net.Uri;
 import com.example.xieyang.Config;
 import com.example.xieyang.net.NetWork;
 import com.example.xieyang.respmodule.RespDataStr;
+import com.example.xieyang.utils.ShowLog;
 import com.example.xieyang.utils.UriTopath;
 import com.example.xieyang.view.MainActivity_View;
 import com.hannesdorfmann.mosby.mvp.MvpBasePresenter;
@@ -46,19 +47,19 @@ public class MainActivity_Presenter extends MvpBasePresenter<MainActivity_View> 
             switch (code){
                 case 200:
                     getView().successChangeHeadPicture(reStr);
-                    System.out.println("头像上传成功!!!");
+                    ShowLog.showTag("头像上传成功!!!");
                     break;
                 case 404:
                     getView().twoUser(code);
-                    System.out.println("您的账号已在别的设备登录，请您重新登录!!!");
+                    ShowLog.showTag("您的账号已在别的设备登录，请您重新登录!!!");
                     break;
             }
-            System.out.println("请求服务器成功,更改头像成功--------------------------");
+            ShowLog.showTag("请求服务器成功,更改头像成功--------------------------");
         }
 
         @Override
         public void onError(Throwable e) {
-            System.out.println(e.toString() + "服务器请求失败或者服务器异常!!!--------MainActivity_Presenter");
+            ShowLog.showTag(e.toString() + "服务器请求失败或者服务器异常!!!--------MainActivity_Presenter");
         }
     };
 

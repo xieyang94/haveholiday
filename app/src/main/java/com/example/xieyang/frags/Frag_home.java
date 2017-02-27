@@ -9,8 +9,9 @@ import android.widget.TextView;
 
 import com.example.administrator.demo3.R;
 import com.example.xieyang.adapter.mySimple_Adapter;
-import com.example.xieyang.common.BaseFragment;
+import com.example.xieyang.base.BaseFragment;
 import com.example.xieyang.presenter.Frag_home_Presenter;
+import com.example.xieyang.utils.ShowLog;
 import com.example.xieyang.utils.Solar;
 import com.example.xieyang.view.Frag_home_View;
 
@@ -33,7 +34,7 @@ public class Frag_home extends BaseFragment<Frag_home_View, Frag_home_Presenter>
         view = View.inflate(getActivity(), R.layout.menus_frag_day, null);
         gv = (GridView) view.findViewById(R.id.gv);
         text = (TextView) view.findViewById(R.id.text);
-        System.out.println(solar.getWeek(2016, 5) + "----------------------------------");
+        ShowLog.showTag(solar.getWeek(2016, 5) + "----------------------------------");
         day = solar.setDayCount(solar.StrToInt(solar.nowYear()), solar.StrToInt(solar.nowMonth()));
         month = solar.StrToInt(solar.nowMonth());
         year = solar.StrToInt(solar.nowYear());
@@ -51,7 +52,7 @@ public class Frag_home extends BaseFragment<Frag_home_View, Frag_home_Presenter>
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 month = (month + count) % 12;
-                System.out.println(month + "------------------分割线up----------------");
+                ShowLog.showTag(month + "------------------分割线up----------------");
                 if (month == 0) {
                     month = 12;
                 }
@@ -69,7 +70,7 @@ public class Frag_home extends BaseFragment<Frag_home_View, Frag_home_Presenter>
             @Override
             public void onClick(View v) {
                 month = (month - count1) % 12;
-                System.out.println(month + "------------------分割线down----------------");
+                ShowLog.showTag(month + "------------------分割线down----------------");
                 if (month == 0) {
                     month = 12;
                 }
@@ -111,7 +112,7 @@ public class Frag_home extends BaseFragment<Frag_home_View, Frag_home_Presenter>
 //            day = solar.setDayCount(solar.StrToInt(solar.nowYear()), solar.StrToInt(solar.nowMonth()));
 //            month = solar.StrToInt(solar.nowMonth());
 //            year = solar.StrToInt(solar.nowYear());
-//            System.out.println(day+"--"+month+"--"+year);
+//            ShowLog.showTag(day+"--"+month+"--"+year);
 //            adapter = new mySimple_Adapter(contextL, day, month, year);
 //            gv.setAdapter(adapter);
 //        }

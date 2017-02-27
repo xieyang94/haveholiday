@@ -4,7 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 
-import com.example.xieyang.common.BaseFragment;
+import com.example.xieyang.base.BaseFragment;
+import com.example.xieyang.utils.ShowLog;
 
 import java.util.ArrayList;
 
@@ -39,7 +40,7 @@ public class FragmentController {
 
 			} catch (Exception e) {
 				e.printStackTrace();
-				System.out.println("添加fragment失败");
+				ShowLog.showTag("添加fragment失败");
 			}
 
 		}

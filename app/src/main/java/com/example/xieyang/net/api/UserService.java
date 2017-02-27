@@ -19,11 +19,7 @@ import retrofit2.http.Part;
 import rx.Observable;
 
 /**
- * Created by Administrator on 2016/5/9.
- *
- * https://www.baidu.com/s?wd=五五开直播&rsv_spt=1&rsv_iqid=0xad84207c00008a67&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=98012088_dg&rsv_enter=1&rsv_sug3=4&rsv_sug1=3&rsv_sug7=100&sug=五五开直播&rsv_n=1&rsv_t=29b3bA2EYQR4PkKf2gWtZKsoCAiY5E14fZ8XMqVyS2%2BV%2BcRD059tztZIDQadTWSVALw
- *
- *
+ * Created by xieyang on 2016/5/9.
  *
  */
 public interface UserService {

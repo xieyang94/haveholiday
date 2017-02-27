@@ -11,6 +11,7 @@ import android.widget.RemoteViews;
 import com.example.administrator.demo3.MainActivity;
 import com.example.administrator.demo3.R;
 import com.example.xieyang.Config;
+import com.example.xieyang.utils.ShowLog;
 
 import java.util.Calendar;
 
@@ -25,10 +26,10 @@ public class NotifyReceiver extends BroadcastReceiver {
         int nmonth=c.get(Calendar.MONTH)+1;//国际日历从0到11月
         int nday=c.get(Calendar.DAY_OF_MONTH);
 
-        System.out.println("----------今天有节日吗？----------"+Config.HOLDER);
+        ShowLog.showTag("----------今天有节日吗？----------"+Config.HOLDER);
 
         if (Config.DAY ==nday&& Config.YEAR == nyear&& Config.MONTH == nmonth&&Config.HOLDER==true) {
-            System.out.println("有节日");
+            ShowLog.showTag("有节日");
 
             RemoteViews contentView = new RemoteViews(context.getPackageName(), R.layout.style_notification);
             contentView.setImageViewResource(R.id.image, R.drawable.icon_notifycation);
@@ -54,7 +55,7 @@ public class NotifyReceiver extends BroadcastReceiver {
             manager.notify(100, notice);
 
         }else{
-            System.out.println("没节日");
+            ShowLog.showTag("没节日");
         }
     }
 }

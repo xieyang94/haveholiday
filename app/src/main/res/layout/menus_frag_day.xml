@@ -12,130 +12,132 @@
         android:background="@color/transparent50"
         android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dip"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_weight="2" />
-        <RelativeLayout
-            android:layout_width="0dip"
-            android:layout_weight="3"
-            android:gravity="center"
-            android:layout_height="match_parent">
-
-        <Button
-            android:id="@+id/btn_down_month"
-            android:layout_width="32dip"
-            android:layout_height="32dip"
-            android:layout_marginRight="20dip"
-            android:gravity="center_vertical"
-            android:background="@drawable/month_down_bg_selecter"
-             />
-        </RelativeLayout>
-
-        <TextView
-            android:id="@+id/text"
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:layout_weight="13"
-            android:textSize="25dip" />
-
-        <RelativeLayout
-            android:layout_width="0dip"
-            android:layout_weight="3"
-            android:gravity="center"
-            android:layout_height="match_parent">
-        <Button
-            android:id="@+id/btn_up_month"
-            android:layout_width="32dip"
-            android:layout_height="32dip"
-            android:layout_marginLeft="20dip"
-            android:gravity="center_vertical"
-            android:background="@drawable/month_up_bg_selecter"
-            />
-        </RelativeLayout>
-
-        <TextView
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_weight="2" />
-        <RelativeLayout
-            android:layout_width="0dip"
-            android:layout_weight="3"
-            android:gravity="center"
-            android:layout_height="match_parent">
-        <TextView
-            android:layout_width="32dip"
-            android:layout_height="32dip"
-            android:background="@drawable/today_selecter"
-            android:id="@+id/button_today"/>
-        </RelativeLayout>
-        <TextView
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="40dip"
             android:orientation="horizontal">
 
             <TextView
-                style="@style/weekName"
-                android:text="周日" />
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2" />
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_down_month"
+                    android:layout_width="32dip"
+                    android:layout_height="32dip"
+                    android:layout_marginRight="20dip"
+                    android:background="@drawable/month_down_bg_selecter"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
 
             <TextView
-                style="@style/weekName"
-                android:text="周一" />
+                android:id="@+id/text"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="13"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="25dip" />
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_up_month"
+                    android:layout_width="32dip"
+                    android:layout_height="32dip"
+                    android:layout_marginLeft="20dip"
+                    android:background="@drawable/month_up_bg_selecter"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
 
             <TextView
-                style="@style/weekName"
-                android:text="周二" />
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2" />
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/button_today"
+                    android:layout_width="32dip"
+                    android:layout_height="32dip"
+                    android:background="@drawable/today_selecter" />
+            </RelativeLayout>
 
             <TextView
-                style="@style/weekName"
-                android:text="周三" />
-
-            <TextView
-                style="@style/weekName"
-                android:text="周四" />
-
-            <TextView
-                style="@style/weekName"
-                android:text="周五" />
-
-            <TextView
-                style="@style/weekName"
-                android:text="周六" />
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="9"
             android:orientation="vertical">
 
-            <com.example.xieyang.utils.StationaryGridview
-                android:id="@+id/gv"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scrollbars="none"
-                android:numColumns="7" />
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/weekName"
+                    android:text="周日" />
+
+                <TextView
+                    style="@style/weekName"
+                    android:text="周一" />
+
+                <TextView
+                    style="@style/weekName"
+                    android:text="周二" />
+
+                <TextView
+                    style="@style/weekName"
+                    android:text="周三" />
+
+                <TextView
+                    style="@style/weekName"
+                    android:text="周四" />
+
+                <TextView
+                    style="@style/weekName"
+                    android:text="周五" />
+
+                <TextView
+                    style="@style/weekName"
+                    android:text="周六" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.example.xieyang.utils.StationaryGridview
+                    android:id="@+id/gv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:numColumns="7"
+                    android:scrollbars="none" />
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
 
     </LinearLayout>
 
