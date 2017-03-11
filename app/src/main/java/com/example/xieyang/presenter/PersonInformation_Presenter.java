@@ -32,7 +32,10 @@ public class PersonInformation_Presenter extends MvpBasePresenter<PersonInformat
         public void onNext(RespData respData) {
             code=respData.code;
             userfrom=respData.data;
-            Config.USERGET=respData.data;
+            Config.USERGET.setUserName(userfrom.getUserName());
+            Config.USERGET.setUserSex(userfrom.getUserSex());
+            Config.USERGET.setUserBirthday(userfrom.getUserBirthday());
+            Config.USERGET.setUserConstellation(userfrom.getUserConstellation());
         }
 
         @Override
@@ -40,7 +43,7 @@ public class PersonInformation_Presenter extends MvpBasePresenter<PersonInformat
             switch (code){
                 case 200:
                     getView().hideLoading();
-                    getView().successUpdate();
+                    getView().successUpdate(Config.USERGET);
                     break;
 
                 case 404:

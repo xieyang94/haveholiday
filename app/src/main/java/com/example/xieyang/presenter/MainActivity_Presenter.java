@@ -32,8 +32,6 @@ public class MainActivity_Presenter extends MvpBasePresenter<MainActivity_View> 
     private String reStr;
     private Subscription subscription;
 
-    private UriTopath uriTopath;
-
     private Observer<RespDataStr> update=new Observer<RespDataStr>(){
         @Override
         public void onNext(RespDataStr respData) {
@@ -66,8 +64,8 @@ public class MainActivity_Presenter extends MvpBasePresenter<MainActivity_View> 
     public void updateHeadPicture( Uri uritopathStr,Context context,String email,String token) {
         unsubscribe(subscription);
 
-        File file = new File(uriTopath.getImageAbsolutePath(context, uritopathStr));
-        RequestBody photoRequestBody = RequestBody.create(MediaType.parse(uriTopath.getMimeType(file.getAbsolutePath())), file);
+        File file = new File(UriTopath.getImageAbsolutePath(context, uritopathStr));
+        RequestBody photoRequestBody = RequestBody.create(MediaType.parse(UriTopath.getMimeType(file.getAbsolutePath())), file);
         MultipartBody.Part file1= MultipartBody.Part.createFormData("file1",file.getName(), photoRequestBody);
 
         subscription = NetWork.getUserService().updateUserHeadPicture(file1, RequestBody.create(null,email), RequestBody.create(null,token)).subscribeOn(Schedulers.io()).

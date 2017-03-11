@@ -1,5 +1,7 @@
 package com.example.xieyang.presenter;
 
+import android.util.Log;
+
 import com.example.xieyang.Config;
 import com.example.xieyang.entity.ReplyItemContent;
 import com.example.xieyang.net.NetWork;
@@ -35,11 +37,14 @@ public class SquareContent_Presenter extends MvpBasePresenter<SquareContent_View
             reStr = respData.data;
 //            Config.replyCount=Integer.parseInt(reStr);
 
+            Log.d("TAG","回复总数；"+reStr);
+
         }
         @Override
         public void onCompleted() {
             switch (code){
                 case 200:
+                    Log.d("TAG","回复总数------------efee---；"+reStr);
                     getView().hideLoading();
                     getView().showReplyCount(reStr);
                     break;

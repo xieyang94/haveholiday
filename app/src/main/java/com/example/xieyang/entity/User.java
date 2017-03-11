@@ -17,16 +17,28 @@ public class User {
     private String userConstellation;//星座
     private String userLocation;//所在地    ---->保留
     private String userNativeplace;//籍贯  ---->保留
-//    private int userState;
+    //    private int userState;
     private String token;
 
-    public User(){}
-    public User(String userPassword, String Email) {
-        this.userPassword = userPassword;
-        this.userEmail = userEmail;
+    public User() {
     }
 
+    public User(String userPassword, String Email) {
+        this.userPassword = userPassword;
+        this.userEmail = Email;
+    }
 
+    public User(String userEmail, String userPassword, String userName, String userSex,
+                String userHeadpicture, String userBirthday, String userConstellation, String token) {
+        this.userEmail = userEmail;
+        this.userPassword = userPassword;
+        this.userName = userName;
+        this.userSex = userSex;
+        this.userHeadpicture = userHeadpicture;
+        this.userBirthday = userBirthday;
+        this.userConstellation = userConstellation;
+        this.token = token;
+    }
 
     public String getUserConstellation() {
         return userConstellation;

@@ -1,8 +1,6 @@
 package com.example.xieyang.aty;
 
 import android.app.ProgressDialog;
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -205,15 +203,6 @@ public class Reply_Activity extends BaseActivity<Reply_View,Reply_Presenter> imp
                 finish();
                 break;
         }
-    }
-    //通过广播刷新数据
-    public static class MyListBroadcastReceiver extends BroadcastReceiver{
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            ShowLog.showTag("------------------通过广播刷新--------------------------");
-//            downCount=Config.replyCount;
-        }
-
     }
 
     @NonNull

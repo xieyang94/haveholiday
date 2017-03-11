@@ -13,13 +13,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.administrator.demo3.MainActivity;
 import com.example.administrator.demo3.R;
 import com.example.xieyang.base.BaseActivity;
 import com.example.xieyang.entity.User;
 import com.example.xieyang.presenter.Login_Presenter;
 import com.example.xieyang.utils.ShowLog;
 import com.example.xieyang.view.Login_View;
+
+import org.greenrobot.eventbus.EventBus;
 
 /**
  * Created by Administrator on 2016/7/23.
@@ -31,9 +32,6 @@ public class Login_Activity extends BaseActivity<Login_View, Login_Presenter> im
     private EditText login_password;
     private TextView tv_register,tv_forgetpw,activity_login_cancel,user_instruction;
     private ImageView title_back;
-
-    public static Login_Activity loginActivityL=null;
-
 
     private ProgressDialog pd = null;
 
@@ -63,12 +61,11 @@ public class Login_Activity extends BaseActivity<Login_View, Login_Presenter> im
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         init();
-        loginActivityL=this;
     }
 
     @Override
     public void cplLogin(int code, User data) {
-        //登录成功后，跳到主界面<intnet>，或者回到之前的界面<finish()>，带回一个登录状态的值<token?不确定？>，使之“登录”改为“退出账号”
+        //登录成功保存用户信息
         SharedPreferences.Editor editor=getSharedPreferences("user",MODE_PRIVATE).edit();
         editor.putString("useraccount",data.getUserEmail());
         editor.putString("userpassword",data.getUserPassword());
@@ -80,11 +77,8 @@ public class Login_Activity extends BaseActivity<Login_View, Login_Presenter> im
         editor.putString("token", data.getToken());
 
         editor.commit();
-        Intent intent =new Intent(Login_Activity.this, MainActivity.class);
-        intent.putExtra("loginstate", "loginSuccess");
-        startActivity(intent);
-//        Toast.makeText(Login_Activity.this,"登录成功"+data.toString(),Toast.LENGTH_SHORT).show();
-        MainActivity.mainActivityL.finish();
+
+        EventBus.getDefault().post(data);
         finish();
         ShowLog.showTag(data.toString());
     }
@@ -96,13 +90,23 @@ public class Login_Activity extends BaseActivity<Login_View, Login_Presenter> im
 
     @Override
     public void failedLink() {
-        Toast.makeText(Login_Activity.this, "服务器请求失败或者服务器异常!!!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Login_Activity.this, "账号密码错误或网络异常", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void successLogin() {
         Toast.makeText(Login_Activity.this, "登陆成功!!!", Toast.LENGTH_SHORT).show();
 //        finish();
+    }
+
+    @Override
+    public void nullId() {
+        Toast.makeText(Login_Activity.this, "账号不能为空", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void nullPwd() {
+        Toast.makeText(Login_Activity.this, "密码不能为空", Toast.LENGTH_SHORT).show();
     }
 
     @Override

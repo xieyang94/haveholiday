@@ -3,7 +3,6 @@ package com.example.xieyang.aty;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -27,6 +26,8 @@ import com.example.xieyang.entity.User;
 import com.example.xieyang.presenter.PersonInformation_Presenter;
 import com.example.xieyang.utils.PopWindow_pf_sex;
 import com.example.xieyang.view.PersonInformation_View;
+
+import org.greenrobot.eventbus.EventBus;
 
 import java.util.Calendar;
 
@@ -202,16 +203,18 @@ public class PersonInformation_Activity extends BaseActivity<PersonInformation_V
     }
 
     @Override
-    public void successUpdate() {
+    public void successUpdate(User user) {
         person_information_save.setVisibility(View.INVISIBLE);
         Toast.makeText(PersonInformation_Activity.this, "个人信息修改成功", Toast.LENGTH_SHORT).show();
         /**
          * 发送一个广播，通知MainActivity的侧滑菜单更新UI
          */
-        Intent intent=new Intent();
-        intent.setAction("com.xieyang.xieyang");
-        sendBroadcast(intent);
+//        Intent intent=new Intent();
+//        intent.setAction("com.xieyang.xieyang");
+//        sendBroadcast(intent);
+        EventBus.getDefault().post(user);
     }
+
 
     @Override
     public void twoUser() {

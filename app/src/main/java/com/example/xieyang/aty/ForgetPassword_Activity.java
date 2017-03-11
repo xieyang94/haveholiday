@@ -1,7 +1,6 @@
 package com.example.xieyang.aty;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.Toolbar;
@@ -12,7 +11,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.example.administrator.demo3.MainActivity;
 import com.example.administrator.demo3.R;
 import com.example.xieyang.Config;
 import com.example.xieyang.base.BaseActivity;
@@ -93,12 +91,8 @@ public class ForgetPassword_Activity extends BaseActivity<ForgetPassword_View, F
 
     @Override
     public void successforget() {
-        Toast.makeText(ForgetPassword_Activity.this, "新密码修改成功，请登录！！！", Toast.LENGTH_SHORT).show();
-        Intent intent=new Intent(ForgetPassword_Activity.this, MainActivity.class);
-        startActivity(intent);
+        Toast.makeText(ForgetPassword_Activity.this, "新密码修改成功，请登录", Toast.LENGTH_SHORT).show();
         finish();
-        Login_Activity.loginActivityL.finish();
-        MainActivity.mainActivityL.finish();
     }
 
     @Override
@@ -108,7 +102,7 @@ public class ForgetPassword_Activity extends BaseActivity<ForgetPassword_View, F
 
     @Override
     public void failedLink() {
-        Toast.makeText(ForgetPassword_Activity.this, "服务器请求失败或者服务器异常!!!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(ForgetPassword_Activity.this, "服务器请求失败或者服务器异常", Toast.LENGTH_SHORT).show();
     }
 
     @Override

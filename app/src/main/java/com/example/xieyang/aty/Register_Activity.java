@@ -1,7 +1,6 @@
 package com.example.xieyang.aty;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.Toolbar;
@@ -13,7 +12,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.administrator.demo3.MainActivity;
 import com.example.administrator.demo3.R;
 import com.example.xieyang.Config;
 import com.example.xieyang.base.BaseActivity;
@@ -64,14 +62,8 @@ public class Register_Activity extends BaseActivity<Register_View,Register_Prese
 
     @Override
     public void registerSucess(int code, String data) {
-        Toast.makeText(Register_Activity.this, "注册成功", Toast.LENGTH_SHORT).show();
-        Intent intent =new Intent(Register_Activity.this, MainActivity.class);
+        Toast.makeText(Register_Activity.this, "注册成功，请登录", Toast.LENGTH_SHORT).show();
         finish();
-        Login_Activity.loginActivityL.finish();
-        MainActivity.mainActivityL.finish();
-//        intent.putExtra("loginstate","loginSuccess");
-
-        startActivity(intent);
     }
 
     @Override

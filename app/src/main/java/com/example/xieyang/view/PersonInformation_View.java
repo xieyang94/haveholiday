@@ -1,12 +1,13 @@
 package com.example.xieyang.view;
 
+import com.example.xieyang.entity.User;
 import com.hannesdorfmann.mosby.mvp.MvpView;
 
 /**
  * Created by Administrator on 2016/7/23.
  */
 public interface PersonInformation_View extends MvpView {
-    void successUpdate();
+    void successUpdate(User user);
     void twoUser();
     /**
      * 加载时显示进度圈

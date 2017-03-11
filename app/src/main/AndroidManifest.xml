@@ -84,22 +84,6 @@
             android:name="com.example.xieyang.aty.Tool_other_festival_Activity"
             android:screenOrientation="portrait" />
 
-        <receiver android:name=".MainActivity$MyBroadcastReceiver">
-            <intent-filter>
-                <action android:name="com.xieyang.xieyang" />
-            </intent-filter>
-        </receiver>
-        <receiver android:name="com.example.xieyang.aty.Reply_Activity$MyListBroadcastReceiver">
-            <intent-filter>
-                <action android:name="com.xieyang.xieyang1" />
-            </intent-filter>
-        </receiver>
-        <receiver android:name="com.example.xieyang.aty.SquareContent_Activity$MyListBroadcastReceiver1">
-            <intent-filter>
-                <action android:name="com.xieyang.xieyang2" />
-            </intent-filter>
-        </receiver>
-
         <service android:name="com.example.xieyang.service.NotifyService" />
 
         <receiver android:name="com.example.xieyang.broadcastreceiver.AlarmReceiver" />

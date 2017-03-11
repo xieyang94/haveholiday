@@ -22,4 +22,14 @@ public interface Login_View extends MvpView{
      */
     void hideLoading();
 
+    /**
+     * 账号为空
+     */
+    void nullId();
+
+    /**
+     * 密码为空
+     */
+    void nullPwd();
+
 }

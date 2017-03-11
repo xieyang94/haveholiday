@@ -55,13 +55,21 @@ public class Login_Presenter extends MvpBasePresenter<Login_View>{
             getView().hideLoading();
             getView().failedLink();
 
-            ShowLog.showTag("222222222222222222222222222222222    直接失败"+"code"+code);
-            ShowLog.showTag(e.toString() + "服务器请求失败或者服务器异常!!!--------Login_Presenter");
+            ShowLog.showTag(e.toString() + "服务器请求失败或者服务器异常!!!--------Login_Presenter"+"code"+code);
         }
     };
 
 
     public void login(String id,String pwd) {
+        if (id.equals("")||id==null){
+            getView().nullId();
+            getView().hideLoading();
+            return;
+        }else if(pwd.equals("")||pwd==null){
+            getView().nullPwd();
+            getView().hideLoading();
+            return;
+        }
         unsubscribe(subscription);
         body.clear();
         body.put("user.userEmail", id);
@@ -70,6 +78,7 @@ public class Login_Presenter extends MvpBasePresenter<Login_View>{
                 observeOn(AndroidSchedulers.mainThread()).subscribe(login);
 
     }
+
 
     protected void unsubscribe(Subscription subscription) {
         if (subscription != null && !subscription.isUnsubscribed()) {

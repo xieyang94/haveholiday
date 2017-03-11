@@ -1,8 +1,6 @@
 package com.example.xieyang.aty;
 
 import android.app.ProgressDialog;
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -28,8 +26,6 @@ import com.example.xieyang.view.SquareContent_View;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
-
-import static com.example.xieyang.utils.ShowLog.showTag;
 
 public class SquareContent_Activity extends BaseActivity<SquareContent_View, SquareContent_Presenter> implements SquareContent_View ,View.OnClickListener{
     private ImageView pf_ContentBg,title_back,pf_Content2, pf_Content4 , pf_Content6;
@@ -246,25 +242,13 @@ public class SquareContent_Activity extends BaseActivity<SquareContent_View, Squ
     }
 
 
-    //通过广播刷新回复数据
-    public static class MyListBroadcastReceiver1 extends BroadcastReceiver {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            ShowLog.showTag("TAG","------------------通过广播刷新--------------------------Config.replyCount="+Config.replyCount);
-//            downCount=Config.replyCount;
-            reply_Count.setText("回复(" + Config.replyCount + ")");
-        }
-
-    }
-
     /**
-     * 回复成功后，数据+1
+     * 回复成功
      * @param replyEven
      */
     @Subscribe
     public void on(ReplyEven replyEven){
-        int times=Config.replyCount+1;
-        reply_Count.setText("回复(" + times + ")");
+        reply_Count.setText("回复(" + Config.replyCount + ")");
     }
 
     @Override
