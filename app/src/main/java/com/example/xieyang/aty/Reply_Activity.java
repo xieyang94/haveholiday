@@ -20,12 +20,16 @@ import com.example.xieyang.Config;
 import com.example.xieyang.adapter.Reply_Adapter;
 import com.example.xieyang.base.BaseActivity;
 import com.example.xieyang.entity.ReplyItemContent;
+import com.example.xieyang.evenbus.UpdateEven;
 import com.example.xieyang.presenter.Reply_Presenter;
 import com.example.xieyang.utils.PTRUtil;
 import com.example.xieyang.utils.ShowLog;
 import com.example.xieyang.view.Reply_View;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,6 +71,7 @@ public class Reply_Activity extends BaseActivity<Reply_View,Reply_Presenter> imp
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        EventBus.getDefault().register(this);
 
         init();
 
@@ -215,5 +220,20 @@ public class Reply_Activity extends BaseActivity<Reply_View,Reply_Presenter> imp
     @Override
     public Reply_Presenter createPresenter() {
         return new Reply_Presenter();
+    }
+
+    @Subscribe
+    public void updateList(UpdateEven updateEven){
+        downCount=10;
+        replys.clear();
+
+        getPresenter().showreplyList(pushedfestivalId,upCount);
+
+    };
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
     }
 }

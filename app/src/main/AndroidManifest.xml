@@ -21,7 +21,9 @@
             </intent-filter>
         </activity>
         -->
-        <activity android:name="com.example.xieyang.aty.Welcome">
+        <activity
+            android:name="com.example.xieyang.aty.Welcome"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -39,21 +41,48 @@
         <activity
             android:name="com.example.xieyang.aty.SumHoliday_Activity"
             android:label="@string/title_activity_sum_holiday"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-        <activity android:name="com.example.xieyang.aty.Tool_time_of_other_Avtivity" />
-        <activity android:name="com.example.xieyang.aty.SquareContent_Activity" />
-        <activity android:name="com.example.xieyang.aty.Reply_Activity" />
-        <activity android:name="com.example.xieyang.aty.ReplyContent_Activity" />
-        <activity android:name="com.example.xieyang.aty.PersonInformation_Activity" />
-        <activity android:name="com.example.xieyang.aty.Register_Activity" />
-        <activity android:name="com.example.xieyang.aty.Tool_time_estimation_Activity" />
-        <activity android:name="com.example.xieyang.aty.Login_Activity" />
-        <activity android:name="com.example.xieyang.aty.ForgetPassword_Activity" />
-        <activity android:name="com.example.xieyang.aty.HolidayContent_Avtivity" />
-        <activity android:name="com.example.xieyang.aty.SumHoliday_month_Activity" />
+        <activity
+            android:name="com.example.xieyang.aty.Tool_time_of_other_Avtivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.xieyang.aty.SquareContent_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.xieyang.aty.Reply_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.xieyang.aty.ReplyContent_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.xieyang.aty.PersonInformation_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.xieyang.aty.Register_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.xieyang.aty.Tool_time_estimation_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.xieyang.aty.Login_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.xieyang.aty.ForgetPassword_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.xieyang.aty.HolidayContent_Avtivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.xieyang.aty.SumHoliday_month_Activity"
+            android:screenOrientation="portrait" />
         <!-- <activity android:name="com.example.xieyang.aty.Welcome"></activity> -->
-        <activity android:name=".MainActivity" />
-        <activity android:name="com.example.xieyang.aty.Tool_other_festival_Activity" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.xieyang.aty.Tool_other_festival_Activity"
+            android:screenOrientation="portrait" />
 
         <receiver android:name=".MainActivity$MyBroadcastReceiver">
             <intent-filter>
@@ -80,7 +109,9 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name="com.example.xieyang.aty.UserInstruction_Activity"></activity>
+        <activity
+            android:name="com.example.xieyang.aty.UserInstruction_Activity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

@@ -14,6 +14,7 @@ import com.example.administrator.demo3.R;
 import com.example.xieyang.Config;
 import com.example.xieyang.base.BaseActivity;
 import com.example.xieyang.evenbus.ReplyEven;
+import com.example.xieyang.evenbus.UpdateEven;
 import com.example.xieyang.presenter.ReplyContent_Presenter;
 import com.example.xieyang.utils.ShowLog;
 import com.example.xieyang.view.ReplyContent_View;
@@ -89,7 +90,8 @@ public class ReplyContent_Activity extends BaseActivity<ReplyContent_View, Reply
         intent1.setAction("com.xieyang.xieyang2");
         sendBroadcast(intent1);
         EventBus.getDefault().post(new ReplyEven("回复+1"));
-        Toast.makeText(ReplyContent_Activity.this, "评论成功，请刷新查看!!!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(ReplyContent_Activity.this, "评论成功", Toast.LENGTH_SHORT).show();
+        EventBus.getDefault().post(new UpdateEven("更新评论"));
     }
 
     @NonNull
