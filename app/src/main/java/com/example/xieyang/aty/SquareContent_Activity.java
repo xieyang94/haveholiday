@@ -1,6 +1,8 @@
 package com.example.xieyang.aty;
 
 import android.app.ProgressDialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -242,13 +244,25 @@ public class SquareContent_Activity extends BaseActivity<SquareContent_View, Squ
     }
 
 
+    //通过广播刷新回复数据
+    public static class MyListBroadcastReceiver1 extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            ShowLog.showTag("TAG","------------------通过广播刷新--------------------------Config.replyCount="+Config.replyCount);
+//            downCount=Config.replyCount;
+            reply_Count.setText("回复(" + Config.replyCount + ")");
+        }
+
+    }
+
     /**
-     * 回复成功
+     * 回复成功后，数据+1
      * @param replyEven
      */
     @Subscribe
     public void on(ReplyEven replyEven){
-        reply_Count.setText("回复(" + Config.replyCount + ")");
+        int times=Config.replyCount+1;
+        reply_Count.setText("回复(" + times + ")");
     }
 
     @Override

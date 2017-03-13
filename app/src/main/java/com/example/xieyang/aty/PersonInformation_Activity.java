@@ -107,7 +107,8 @@ public class PersonInformation_Activity extends BaseActivity<PersonInformation_V
             case R.id.person_information_edit:
                 setEnabled();
                 person_information_save.setVisibility(View.VISIBLE);
-                Toast.makeText(PersonInformation_Activity.this, "编辑", Toast.LENGTH_LONG).show();
+//                showToast("编辑");
+//                Toast.makeText(PersonInformation_Activity.this, "编辑", Toast.LENGTH_LONG).show();
                 break;
             case R.id.person_information_sex:
                 InputMethodManager imm = (InputMethodManager)
